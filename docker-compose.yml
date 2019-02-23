@@ -1,0 +1,7 @@
+version: '3'
+services:
+  internet-connection-test:
+    build: .
+    restart: always
+    volumes:
+      - ./results:/results
