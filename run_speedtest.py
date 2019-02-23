@@ -11,7 +11,7 @@ import time
 
 def writeResultsToFile(file_prefix, test_results):
   today = str(date.today())
-  filename = file_prefix + "-results-" + today + ".json"
+  filename = "./results/" + file_prefix + "-results-" + today + ".json"
 
   # create file if it does not exist
   Path(filename).touch(exist_ok=True)
