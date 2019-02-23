@@ -1,0 +1,1 @@
+Simple python script that checks my internet connection in regular intervals. ;)
