@@ -40,15 +40,10 @@ def runSpeedtest():
 def runHttpRequest(url):
   result = { "url": url }
   try:
-    r = requests.get(url)
+    r = requests.get(url, timeout=30)
     result["status"] = r.status_code
   except BaseException as err:
-    #print(str(err))
-    ex_type, ex_value = sys.exc_info()
-    result["error"] = {
-      "type": ex_type.__name__,
-      "message": ex_value
-    }
+    result["error"] = str(err)
   return result
 
 def runIpv4Ipv6Test():
