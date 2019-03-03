@@ -2,4 +2,4 @@ Had some issues with my internet provider regarding ipv4 connections so i build 
 
 Simple python script that checks my internet connection in regular intervals. ;)
 
-Disclaimer: I'm not so familiar with this python thingy is 
+Disclaimer: I'm not so familiar with this python thingy.

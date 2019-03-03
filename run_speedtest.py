@@ -27,15 +27,18 @@ def writeResultsToFile(file_prefix, test_results):
     log_file.truncate()
 
 def runSpeedtest():
-  servers = [15874]
-  s = speedtest.Speedtest()
-  s.get_servers(servers)
-  s.get_best_server()
-  s.download()
-  s.upload()
-  results_dict = s.results.dict()
-  print(results_dict)
-  writeResultsToFile("speedtest", results_dict)
+  try:
+    servers = [15874]
+    s = speedtest.Speedtest()
+    s.get_servers(servers)
+    s.get_best_server()
+    s.download()
+    s.upload()
+    results_dict = s.results.dict()
+    print(results_dict)
+    writeResultsToFile("speedtest", results_dict)
+  except BaseException as err:
+    print(err)
 
 def runHttpRequest(url):
   result = { "url": url }
